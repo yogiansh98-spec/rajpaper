@@ -1,0 +1,168 @@
+[
+  {
+    "id": "rbse-10-2026",
+    "title": "RBSE 10वीं Result 2026",
+    "detail": "Secondary & Vocational Examination",
+    "category": "10",
+    "stream": "",
+    "kind": "main",
+    "board": "RBSE",
+    "year": 2026,
+    "announced_on": "2026-03-24",
+    "url": "https://rajeduboard.rajasthan.gov.in/RESULT2026/SEV/Roll_Input.htm",
+    "fallback": "https://rajeduboard.rajasthan.gov.in/RESULT2026/Result2026.htm",
+    "keywords": [
+      "10th",
+      "tenth",
+      "secondary",
+      "दसवीं",
+      "दसवी",
+      "मैट्रिक",
+      "class 10"
+    ]
+  },
+  {
+    "id": "rbse-12-science-2026",
+    "title": "RBSE 12वीं Science Result 2026",
+    "detail": "Senior Secondary — Science",
+    "category": "12",
+    "stream": "Science",
+    "kind": "main",
+    "board": "RBSE",
+    "year": 2026,
+    "announced_on": "2026-03-31",
+    "url": "https://rajeduboard.rajasthan.gov.in/RESULT2026/SCIENCE/Roll_Input.htm",
+    "fallback": "https://rajeduboard.rajasthan.gov.in/RESULT2026/Result2026.htm",
+    "keywords": [
+      "12th",
+      "बारहवीं",
+      "विज्ञान",
+      "साइंस",
+      "science",
+      "class 12"
+    ]
+  },
+  {
+    "id": "rbse-12-arts-2026",
+    "title": "RBSE 12वीं Arts Result 2026",
+    "detail": "Senior Secondary — Arts",
+    "category": "12",
+    "stream": "Arts",
+    "kind": "main",
+    "board": "RBSE",
+    "year": 2026,
+    "announced_on": "2026-03-31",
+    "url": "https://rajeduboard.rajasthan.gov.in/RESULT2026/ARTS/Roll_Input.htm",
+    "fallback": "https://rajeduboard.rajasthan.gov.in/RESULT2026/Result2026.htm",
+    "keywords": [
+      "12th",
+      "बारहवीं",
+      "कला",
+      "आर्ट्स",
+      "arts",
+      "class 12"
+    ]
+  },
+  {
+    "id": "rbse-12-commerce-2026",
+    "title": "RBSE 12वीं Commerce Result 2026",
+    "detail": "Senior Secondary — Commerce",
+    "category": "12",
+    "stream": "Commerce",
+    "kind": "main",
+    "board": "RBSE",
+    "year": 2026,
+    "announced_on": "2026-03-31",
+    "url": "https://rajeduboard.rajasthan.gov.in/RESULT2026/COMM/Roll_Input.htm",
+    "fallback": "https://rajeduboard.rajasthan.gov.in/RESULT2026/Result2026.htm",
+    "keywords": [
+      "12th",
+      "बारहवीं",
+      "वाणिज्य",
+      "कॉमर्स",
+      "commerce",
+      "class 12"
+    ]
+  },
+  {
+    "id": "rbse-10-supp-2026",
+    "title": "RBSE 10वीं Supplementary Result 2026",
+    "detail": "Secondary Supplementary Examination",
+    "category": "10",
+    "stream": "",
+    "kind": "supplementary",
+    "board": "RBSE",
+    "year": 2026,
+    "announced_on": "2026-05-29",
+    "url": "https://rajeduboard.rajasthan.gov.in/RESULTSUPP2026/SEV/Roll_Input.htm",
+    "fallback": "https://rajeduboard.rajasthan.gov.in/RESULTSUPP2026/Result2026S.htm",
+    "keywords": [
+      "10th",
+      "दसवीं",
+      "सप्लीमेंट्री",
+      "पूरक",
+      "supplementary"
+    ]
+  },
+  {
+    "id": "rbse-12-supp-2026",
+    "title": "RBSE 12वीं Supplementary Result 2026",
+    "detail": "Senior Secondary Supplementary Examination",
+    "category": "12",
+    "stream": "",
+    "kind": "supplementary",
+    "board": "RBSE",
+    "year": 2026,
+    "announced_on": "2026-05-29",
+    "url": "https://rajeduboard.rajasthan.gov.in/RESULTSUPP2026/SRS/Roll_Input.htm",
+    "fallback": "https://rajeduboard.rajasthan.gov.in/RESULTSUPP2026/Result2026S.htm",
+    "keywords": [
+      "12th",
+      "बारहवीं",
+      "सप्लीमेंट्री",
+      "पूरक",
+      "supplementary"
+    ]
+  },
+  {
+    "id": "rbse-12-revised-2026",
+    "title": "RBSE 12वीं Revised / Withheld Result 2026",
+    "detail": "RL/RWH/Revised — Senior Secondary",
+    "category": "12",
+    "stream": "",
+    "kind": "revised",
+    "board": "RBSE",
+    "year": 2026,
+    "announced_on": "",
+    "updated_on": "2026-08-06",
+    "url": "https://rajeduboard.rajasthan.gov.in/RESULT2026/RL-RWH/SRS/Roll_Input.htm",
+    "fallback": "https://rajeduboard.rajasthan.gov.in/RESULT2026/Result2026.htm",
+    "keywords": [
+      "12th",
+      "बारहवीं",
+      "संशोधित",
+      "revised",
+      "withheld",
+      "rwh",
+      "rl"
+    ]
+  },
+  {
+    "id": "rbse-praveshika-2026",
+    "title": "RBSE प्रवेशिका Result 2026",
+    "detail": "Praveshika Examination",
+    "category": "other",
+    "stream": "",
+    "kind": "main",
+    "board": "RBSE",
+    "year": 2026,
+    "announced_on": "2026-03-24",
+    "url": "https://rajeduboard.rajasthan.gov.in/RESULT2026/PRAV/Roll_Input.htm",
+    "fallback": "https://rajeduboard.rajasthan.gov.in/RESULT2026/Result2026.htm",
+    "keywords": [
+      "praveshika",
+      "प्रवेशिका",
+      "vocational"
+    ]
+  }
+]
