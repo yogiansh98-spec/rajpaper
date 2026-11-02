@@ -27,12 +27,12 @@ for source in SOURCES:
     for href,label in parser.links:
       url=urljoin(source,href)
       parsed=urlparse(url)
-      if parsed.scheme!="https" or parsed.hostname not in ALLOWED or not re.search(r"\\.pdf$",parsed.path,re.I): continue
+      if parsed.scheme!="https" or parsed.hostname not in ALLOWED or not re.search(r"\.pdf$",parsed.path,re.I): continue
       candidates[url]={"source_page":source,"title_hint":label[:160],"pdf_url":url,"status":"needs_review"}
   except Exception as e:
     print(f"Source unavailable: {source}: {type(e).__name__}")
 path=Path(__file__).resolve().parents[1]/"data"/"candidates.json"
 old={x["pdf_url"]:x for x in json.loads(path.read_text(encoding="utf-8"))} if path.exists() else {}
 old.update(candidates)
-path.write_text(json.dumps(sorted(old.values(),key=lambda x:x["pdf_url"]),ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+path.write_text(json.dumps(sorted(old.values(),key=lambda x:x["pdf_url"]),ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print(f"Queued {len(old)} candidate links; no automatic publication.")
