@@ -1,0 +1,131 @@
+[
+  {
+    "id": "reet",
+    "name": "REET",
+    "board": "BSER",
+    "aliases": [
+      "रीट",
+      "Rajasthan Eligibility Examination for Teachers"
+    ],
+    "filters": [
+      {
+        "key": "year",
+        "label": "वर्ष"
+      },
+      {
+        "key": "level",
+        "label": "लेवल"
+      },
+      {
+        "key": "exam_date",
+        "label": "तारीख"
+      },
+      {
+        "key": "session",
+        "label": "शिफ्ट"
+      },
+      {
+        "key": "set_code",
+        "label": "सेट"
+      }
+    ]
+  },
+  {
+    "id": "rpsc-grade2",
+    "name": "RPSC 2nd Grade",
+    "board": "RPSC",
+    "aliases": [
+      "2nd Grade",
+      "second grade",
+      "सेकंड ग्रेड",
+      "द्वितीय श्रेणी",
+      "वरिष्ठ अध्यापक"
+    ],
+    "filters": [
+      {
+        "key": "recruitment",
+        "label": "भर्ती प्रकार"
+      },
+      {
+        "key": "year",
+        "label": "वर्ष"
+      },
+      {
+        "key": "paper_type",
+        "label": "पेपर प्रकार"
+      },
+      {
+        "key": "subject",
+        "label": "विषय"
+      },
+      {
+        "key": "group",
+        "label": "ग्रुप"
+      },
+      {
+        "key": "exam_date",
+        "label": "तारीख"
+      },
+      {
+        "key": "session",
+        "label": "शिफ्ट"
+      },
+      {
+        "key": "set_code",
+        "label": "सेट"
+      }
+    ]
+  },
+  {
+    "id": "patwari",
+    "name": "RSSB Patwari",
+    "board": "RSSB",
+    "aliases": [
+      "Patwar",
+      "पटवारी",
+      "पटवार",
+      "RSMSSB"
+    ],
+    "filters": [
+      {
+        "key": "year",
+        "label": "वर्ष"
+      },
+      {
+        "key": "exam_date",
+        "label": "तारीख"
+      },
+      {
+        "key": "session",
+        "label": "शिफ्ट"
+      },
+      {
+        "key": "set_code",
+        "label": "पेपर कोड"
+      }
+    ]
+  },
+  {
+    "id": "rpsc-analyst-ayurveda",
+    "name": "RPSC Analyst (Ayurveda)",
+    "board": "RPSC",
+    "aliases": [
+      "आयुर्वेद",
+      "Analyst"
+    ],
+    "filters": [
+      {
+        "key": "year",
+        "label": "वर्ष"
+      },
+      {
+        "key": "subject",
+        "label": "विषय"
+      },
+      {
+        "key": "exam_date",
+        "label": "तारीख"
+      }
+    ]
+  }
+]
