@@ -11,7 +11,7 @@ YEAR=int(TODAY[:4])
 HOSTS={"rajeduboard.rajasthan.gov.in","rpsc.rajasthan.gov.in","rsmssb.rajasthan.gov.in","rssb.rajasthan.gov.in","police.rajasthan.gov.in"}
 SOURCES={
  "RPSC":"https://rpsc.rajasthan.gov.in/results.aspx",
- "RSSB":"https://rsmssb.rajasthan.gov.in/page?menuName=Home",
+ "RSSB":"https://rsmssb.rajasthan.gov.in/page?menuName=XThs%2FFdacUY%3D&theme=Green",
  "Police":"https://police.rajasthan.gov.in/portal/RecruitmentsResults"
 }
 class A(HTMLParser):
@@ -47,7 +47,9 @@ def identify(url):
  m=re.search(r"/RESULT(SUPP)?(\d{4})/",p,re.I)
  if not m:return None
  year=int(m.group(2))
- if not YEAR<=year<=YEAR+1:return None
+ if year!=YEAR:return None
+ if urlparse(url).hostname!="rajeduboard.rajasthan.gov.in":return None
+ if not re.search(r"/Roll_Input\.htm$",p,re.I):return None
  section=p.upper().split("/")[-2]
  types={
  "SEV":("10","10वीं",""),"SCIENCE":("12","12वीं Science","Science"),
@@ -69,7 +71,7 @@ def identify(url):
 def main():
  results_path=ROOT/"results.json";results=load(results_path,[])
  seen={x.get("url") for x in results}
- for year in (YEAR,YEAR+1):
+ for year in (YEAR,):
   for prefix,idx in (("RESULT",f"Result{year}.htm"),("RESULTSUPP",f"Result{year}S.htm")):
    page=f"https://rajeduboard.rajasthan.gov.in/{prefix}{year}/{idx}"
    try:
@@ -83,7 +85,7 @@ def main():
      if not entry:continue
      try:
       html=get(url)
-      if not re.search(r"<input",html,re.I) or not re.search(r"roll\s*[- ]?\s*(?:no|number)|अनुक्रमांक",html,re.I):continue
+      if not re.search(r"<input\b",html,re.I) or not re.search(r"roll\s*[- ]?\s*(?:no|number)|अनुक्रमांक",html,re.I):continue
      except Exception as ex:print("skip unverified form",type(ex).__name__);continue
      results.append(entry);seen.add(url);print("published verified RBSE",entry["title"])
    except Exception as ex:print("source unavailable",page,type(ex).__name__)
