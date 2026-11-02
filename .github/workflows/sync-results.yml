@@ -1,5 +1,9 @@
 name: Update RajResults from official sites
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-results.yml'
   workflow_dispatch:
   schedule:
     - cron: '11 2,8,14,20 * * *'
