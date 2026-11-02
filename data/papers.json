@@ -1,5 +1,77 @@
 [
   {
+    "name": "REET 2025 — Level 1 (प्राथमिक शिक्षक)",
+    "exam": "REET रीट Rajasthan Eligibility Examination Teacher अध्यापक पात्रता BSER RBSE",
+    "year": "2025",
+    "shift": "Level 1 · Shift 1 · 27 Feb 2025",
+    "pdf_url": "https://reet-bucket.blr1.cdn.digitaloceanspaces.com/REET2024-Prod/QP/PL1_1.pdf",
+    "source": "BSER"
+  },
+  {
+    "name": "REET 2025 — Level 2 (उच्च प्राथमिक शिक्षक) · Shift 2",
+    "exam": "REET रीट Rajasthan Eligibility Examination Teacher अध्यापक पात्रता BSER RBSE",
+    "year": "2025",
+    "shift": "Level 2 · Shift 2 · 27 Feb 2025",
+    "pdf_url": "https://reet-bucket.blr1.cdn.digitaloceanspaces.com/REET2024-Prod/QP/RL2_2.pdf",
+    "source": "BSER"
+  },
+  {
+    "name": "REET 2025 — Level 2 (उच्च प्राथमिक शिक्षक) · Shift 3",
+    "exam": "REET रीट Rajasthan Eligibility Examination Teacher अध्यापक पात्रता BSER RBSE",
+    "year": "2025",
+    "shift": "Level 2 · Shift 3 · 28 Feb 2025",
+    "pdf_url": "https://reet-bucket.blr1.cdn.digitaloceanspaces.com/REET2024-Prod/QP/RL2_3.pdf",
+    "source": "BSER"
+  },
+  {
+    "name": "RPSC 2nd Grade 2024 — GK व शैक्षिक मनोविज्ञान",
+    "exam": "RPSC 2nd Grade second grade सेकंड ग्रेड द्वितीय श्रेणी वरिष्ठ अध्यापक Senior Teacher Grade 2 Grade II GK Educational Psychology सामान्य ज्ञान मनोविज्ञान",
+    "year": "2024",
+    "shift": "GK & Education Psychology · Sanskrit Education",
+    "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/A4D558A0-98EF-41A7-8200-4F1293C8C3E2.pdf",
+    "source": "RPSC"
+  },
+  {
+    "name": "RPSC 2nd Grade 2024 — हिन्दी",
+    "exam": "RPSC 2nd Grade second grade सेकंड ग्रेड द्वितीय श्रेणी वरिष्ठ अध्यापक Senior Teacher Grade 2 Grade II Hindi हिन्दी हिंदी",
+    "year": "2024",
+    "shift": "Hindi · Sanskrit Education",
+    "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/1DD271F0-00B8-4400-8215-C49AE51383E7.pdf",
+    "source": "RPSC"
+  },
+  {
+    "name": "RPSC 2nd Grade 2024 — English",
+    "exam": "RPSC 2nd Grade second grade सेकंड ग्रेड द्वितीय श्रेणी वरिष्ठ अध्यापक Senior Teacher Grade 2 Grade II English अंग्रेज़ी अंग्रेजी",
+    "year": "2024",
+    "shift": "English · Sanskrit Education",
+    "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/7366D0E4-E670-4645-86DC-C9E03B8F8CF5.pdf",
+    "source": "RPSC"
+  },
+  {
+    "name": "RPSC 2nd Grade 2024 — गणित",
+    "exam": "RPSC 2nd Grade second grade सेकंड ग्रेड द्वितीय श्रेणी वरिष्ठ अध्यापक Senior Teacher Grade 2 Grade II Maths Mathematics गणित",
+    "year": "2024",
+    "shift": "Mathematics · Sanskrit Education",
+    "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/0501454E-FF66-4FA9-AA42-1AA0A0969831.pdf",
+    "source": "RPSC"
+  },
+  {
+    "name": "RPSC 2nd Grade 2024 — संस्कृत",
+    "exam": "RPSC 2nd Grade second grade सेकंड ग्रेड द्वितीय श्रेणी वरिष्ठ अध्यापक Senior Teacher Grade 2 Grade II Sanskrit संस्कृत",
+    "year": "2024",
+    "shift": "Sanskrit · Sanskrit Education",
+    "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/9C95189A-DBCA-4D13-9941-BD89BD5FD038.pdf",
+    "source": "RPSC"
+  },
+  {
+    "name": "RPSC 2nd Grade 2024 — विज्ञान",
+    "exam": "RPSC 2nd Grade second grade सेकंड ग्रेड द्वितीय श्रेणी वरिष्ठ अध्यापक Senior Teacher Grade 2 Grade II Science विज्ञान",
+    "year": "2024",
+    "shift": "Science · Sanskrit Education",
+    "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/42F6F541-4BD5-46E3-BE28-1309968748D4.pdf",
+    "source": "RPSC"
+  },
+  {
     "name": "RSSB Patwari 2021 — 104A (सुबह)",
     "exam": "Patwari पटवारी पटवार RSSB RSMSSB",
     "year": "2021",
