@@ -27,19 +27,8 @@ jobs:
           python-version: '3.12'
       - name: Fetch results from official websites
         run: python scripts/sync_results.py
-      - name: Validate JSON and official result links
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          from urllib.parse import urlparse
-          allowed={'rajeduboard.rajasthan.gov.in','rpsc.rajasthan.gov.in','rssb.rajasthan.gov.in','rsmssb.rajasthan.gov.in','police.rajasthan.gov.in'}
-          data=json.loads(Path('data/results.json').read_text(encoding='utf-8'))
-          assert isinstance(data,list)
-          assert all(x.get('title') and x.get('board') and urlparse(x.get('url','')).hostname in allowed for x in data)
-          assert len({x['url'] for x in data})==len(data)
-          print('Verified entries:',len(data))
-          PY
+      - name: Validate all published result URLs
+        run: python scripts/validate_results.py
       - name: Commit verified results and review candidates
         run: |
           git config user.name 'github-actions[bot]'
