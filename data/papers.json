@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "name": "RSSB Patwari 2021 — 104A (सुबह)",
+    "exam": "Patwari पटवारी पटवार RSSB RSMSSB",
+    "year": "2021",
+    "shift": "Morning 23 Oct 104A",
+    "pdf_url": "https://rsmssb.rajasthan.gov.in/Static/files/104A_MasterQuestionPaper_Patwar2021_23102021_Morning.pdf",
+    "source": "RSSB"
+  },
+  {
+    "name": "RSSB Patwari 2021 — 104B (शाम)",
+    "exam": "Patwari पटवारी पटवार RSSB RSMSSB",
+    "year": "2021",
+    "shift": "Evening 23 Oct 104B",
+    "pdf_url": "https://rsmssb.rajasthan.gov.in/Static/files/104B_MasterQuestionPaper_Patwar2021_23102021_Evening.pdf",
+    "source": "RSSB"
+  },
+  {
+    "name": "RSSB Patwari 2021 — 104D (शाम)",
+    "exam": "Patwari पटवारी पटवार RSSB RSMSSB",
+    "year": "2021",
+    "shift": "Evening 24 Oct 104D",
+    "pdf_url": "https://rsmssb.rajasthan.gov.in/Static/files/104D_MasterQuestionPaper_Patwar2021_24102021_Evening.pdf",
+    "source": "RSSB"
+  },
+  {
+    "name": "RPSC Analyst Ayurveda — Ras Shastra",
+    "exam": "RPSC Analyst Ayurveda आयुर्वेद रसशास्त्र",
+    "year": "",
+    "shift": "RPSC_ANAL_RASA",
+    "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/BA861BCD-DAEA-4D63-81F3-0D3E8F44F674.pdf",
+    "source": "RPSC"
+  }
+]
