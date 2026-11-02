@@ -109,7 +109,7 @@ footer{padding:15px 0 30px;text-align:center;color:#8a97a9;font-size:12px}
  const safe=url=>{try{const u=new URL(url);return u.protocol==='https:'&&approvedHosts.has(u.hostname)}catch{return false}};
  const stamp=r=>r.updated_on||r.announced_on||r.verified_on||'';
  const age=r=>{const t=Date.parse(stamp(r));return Number.isFinite(t)?Math.max(0,(Date.now()-t)/86400000):99999};
- const isOld=r=>age(r)>120;
+ const isOld=r=>age(r)>(r.board==='RBSE'?365:180);
  const match=(r,query)=>{
   const blob=fold([r.title,r.detail,r.category,r.stream,r.kind,r.year,r.board,...(r.keywords||[])].join(' '));
   return fold(query).split(' ').filter(Boolean).every(t=>blob.includes(t)||(syn[t]&&blob.includes(fold(syn[t]))));
