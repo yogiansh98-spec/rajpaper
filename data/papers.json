@@ -5,7 +5,11 @@
     "year": "2025",
     "shift": "Level 1 · Shift 1 · 27 Feb 2025",
     "pdf_url": "https://reet-bucket.blr1.cdn.digitaloceanspaces.com/REET2024-Prod/QP/PL1_1.pdf",
-    "source": "BSER"
+    "source": "BSER",
+    "exam_id": "reet",
+    "level": "Level 1",
+    "session": "Shift 1",
+    "exam_date": "2025-02-27"
   },
   {
     "name": "REET 2025 — Level 2 (उच्च प्राथमिक शिक्षक) · Shift 2",
@@ -13,7 +17,11 @@
     "year": "2025",
     "shift": "Level 2 · Shift 2 · 27 Feb 2025",
     "pdf_url": "https://reet-bucket.blr1.cdn.digitaloceanspaces.com/REET2024-Prod/QP/RL2_2.pdf",
-    "source": "BSER"
+    "source": "BSER",
+    "exam_id": "reet",
+    "level": "Level 2",
+    "session": "Shift 2",
+    "exam_date": "2025-02-27"
   },
   {
     "name": "REET 2025 — Level 2 (उच्च प्राथमिक शिक्षक) · Shift 3",
@@ -21,7 +29,11 @@
     "year": "2025",
     "shift": "Level 2 · Shift 3 · 28 Feb 2025",
     "pdf_url": "https://reet-bucket.blr1.cdn.digitaloceanspaces.com/REET2024-Prod/QP/RL2_3.pdf",
-    "source": "BSER"
+    "source": "BSER",
+    "exam_id": "reet",
+    "level": "Level 2",
+    "session": "Shift 3",
+    "exam_date": "2025-02-28"
   },
   {
     "name": "RPSC 2nd Grade 2024 — GK व शैक्षिक मनोविज्ञान",
@@ -29,7 +41,11 @@
     "year": "2024",
     "shift": "GK & Education Psychology · Sanskrit Education",
     "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/A4D558A0-98EF-41A7-8200-4F1293C8C3E2.pdf",
-    "source": "RPSC"
+    "source": "RPSC",
+    "exam_id": "rpsc-grade2",
+    "recruitment": "Sanskrit Education",
+    "paper_type": "GK & Education Psychology",
+    "subject": "सामान्य ज्ञान"
   },
   {
     "name": "RPSC 2nd Grade 2024 — हिन्दी",
@@ -37,7 +53,11 @@
     "year": "2024",
     "shift": "Hindi · Sanskrit Education",
     "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/1DD271F0-00B8-4400-8215-C49AE51383E7.pdf",
-    "source": "RPSC"
+    "source": "RPSC",
+    "exam_id": "rpsc-grade2",
+    "recruitment": "Sanskrit Education",
+    "paper_type": "Subject paper",
+    "subject": "हिन्दी"
   },
   {
     "name": "RPSC 2nd Grade 2024 — English",
@@ -45,7 +65,11 @@
     "year": "2024",
     "shift": "English · Sanskrit Education",
     "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/7366D0E4-E670-4645-86DC-C9E03B8F8CF5.pdf",
-    "source": "RPSC"
+    "source": "RPSC",
+    "exam_id": "rpsc-grade2",
+    "recruitment": "Sanskrit Education",
+    "paper_type": "Subject paper",
+    "subject": "English"
   },
   {
     "name": "RPSC 2nd Grade 2024 — गणित",
@@ -53,7 +77,11 @@
     "year": "2024",
     "shift": "Mathematics · Sanskrit Education",
     "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/0501454E-FF66-4FA9-AA42-1AA0A0969831.pdf",
-    "source": "RPSC"
+    "source": "RPSC",
+    "exam_id": "rpsc-grade2",
+    "recruitment": "Sanskrit Education",
+    "paper_type": "Subject paper",
+    "subject": "गणित"
   },
   {
     "name": "RPSC 2nd Grade 2024 — संस्कृत",
@@ -61,7 +89,11 @@
     "year": "2024",
     "shift": "Sanskrit · Sanskrit Education",
     "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/9C95189A-DBCA-4D13-9941-BD89BD5FD038.pdf",
-    "source": "RPSC"
+    "source": "RPSC",
+    "exam_id": "rpsc-grade2",
+    "recruitment": "Sanskrit Education",
+    "paper_type": "Subject paper",
+    "subject": "संस्कृत"
   },
   {
     "name": "RPSC 2nd Grade 2024 — विज्ञान",
@@ -69,7 +101,11 @@
     "year": "2024",
     "shift": "Science · Sanskrit Education",
     "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/42F6F541-4BD5-46E3-BE28-1309968748D4.pdf",
-    "source": "RPSC"
+    "source": "RPSC",
+    "exam_id": "rpsc-grade2",
+    "recruitment": "Sanskrit Education",
+    "paper_type": "Subject paper",
+    "subject": "विज्ञान"
   },
   {
     "name": "RSSB Patwari 2021 — 104A (सुबह)",
@@ -77,7 +113,11 @@
     "year": "2021",
     "shift": "Morning 23 Oct 104A",
     "pdf_url": "https://rsmssb.rajasthan.gov.in/Static/files/104A_MasterQuestionPaper_Patwar2021_23102021_Morning.pdf",
-    "source": "RSSB"
+    "source": "RSSB",
+    "exam_id": "patwari",
+    "session": "Morning",
+    "exam_date": "2021-10-23",
+    "set_code": "104A"
   },
   {
     "name": "RSSB Patwari 2021 — 104B (शाम)",
@@ -85,7 +125,11 @@
     "year": "2021",
     "shift": "Evening 23 Oct 104B",
     "pdf_url": "https://rsmssb.rajasthan.gov.in/Static/files/104B_MasterQuestionPaper_Patwar2021_23102021_Evening.pdf",
-    "source": "RSSB"
+    "source": "RSSB",
+    "exam_id": "patwari",
+    "session": "Evening",
+    "exam_date": "2021-10-23",
+    "set_code": "104B"
   },
   {
     "name": "RSSB Patwari 2021 — 104D (शाम)",
@@ -93,7 +137,11 @@
     "year": "2021",
     "shift": "Evening 24 Oct 104D",
     "pdf_url": "https://rsmssb.rajasthan.gov.in/Static/files/104D_MasterQuestionPaper_Patwar2021_24102021_Evening.pdf",
-    "source": "RSSB"
+    "source": "RSSB",
+    "exam_id": "patwari",
+    "session": "Evening",
+    "exam_date": "2021-10-24",
+    "set_code": "104D"
   },
   {
     "name": "RPSC Analyst Ayurveda — Ras Shastra",
@@ -101,6 +149,8 @@
     "year": "",
     "shift": "RPSC_ANAL_RASA",
     "pdf_url": "https://rpsc.rajasthan.gov.in/Static/PreviousQuestionPaper/BA861BCD-DAEA-4D63-81F3-0D3E8F44F674.pdf",
-    "source": "RPSC"
+    "source": "RPSC",
+    "exam_id": "rpsc-analyst-ayurveda",
+    "subject": "Ras Shastra"
   }
 ]
