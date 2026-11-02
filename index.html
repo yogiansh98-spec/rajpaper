@@ -8,7 +8,7 @@
 <style>
 :root{font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;color:#17243f;background:#f5f7fc}
 *{box-sizing:border-box}body{margin:0}a{color:#1356b6}header{background:#fff;border-bottom:1px solid #e4e9f3}nav{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:15px 20px}.logo{font-size:23px;font-weight:850;color:#183a75;text-decoration:none}.logo span{color:#f08b2d}.navnote{font-size:12px;color:#63728b}.hero{background:linear-gradient(135deg,#133b81,#2967b7);color:white;padding:58px 20px 65px}.wrap{max-width:960px;margin:auto}.hero h1{font-size:clamp(29px,5vw,46px);line-height:1.35;margin:0 0 12px}.hero p{margin:0 0 24px;color:#dce9fb;font-size:16px}.searchbox{display:flex;align-items:center;background:white;border-radius:14px;padding:0 15px;max-width:720px;box-shadow:0 12px 30px #05255840}.searchbox .glass{font-size:22px}.searchbox input{outline:none;border:0;background:transparent;flex:1;min-width:0;padding:19px 10px;font-size:17px;color:#182b4c}.searchbox input::placeholder{color:#8090a7}.hero small{display:block;margin-top:14px;color:#cee0fb}.main{padding:26px 20px 45px}.heading{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}.heading h2{margin:0;font-size:22px}.count{color:#61738f;font-size:14px}.chips{display:flex;gap:8px;overflow:auto;padding:2px 0 17px}.chip{border:1px solid #d8e1ef;border-radius:999px;background:#fff;padding:9px 15px;cursor:pointer;color:#355175;white-space:nowrap;font-size:14px}.chip[aria-pressed=true]{background:#173f85;color:#fff;border-color:#173f85}.paper{background:white;border:1px solid #e2e8f2;border-radius:16px;padding:18px 20px;margin:10px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;box-shadow:0 3px 12px #1d447208}.paper h3{margin:7px 0;font-size:17px;line-height:1.5}.paper .meta{font-size:13px;color:#62738d;line-height:1.8}.tag{color:#1755a1;background:#eaf2ff;border-radius:6px;padding:4px 8px;font-size:11px;font-weight:750}.download{white-space:nowrap;background:#ecf4ff;border:1px solid #c4d9fa;text-decoration:none;border-radius:10px;font-size:14px;font-weight:700;padding:12px 15px}.download:hover{background:#dcecff}.empty{padding:40px 12px;text-align:center;color:#61738f;background:white;border:1px dashed #d3dce8;border-radius:16px}.about{margin-top:30px;background:#fff;border:1px solid #e3eaf4;padding:20px;border-radius:16px;color:#5c6c83;line-height:1.8}.about h2{margin:0 0 8px;font-size:19px;color:#1c3154}.about p{margin:0}footer{color:#8390a3;text-align:center;padding:24px;font-size:12px}#status{min-height:18px}@media(max-width:540px){.hero{padding:45px 19px 50px}.paper{align-items:flex-start;flex-direction:column;gap:10px}.download{display:block;text-align:center;width:100%}.main{padding:25px 15px}.navnote{display:none}}
-</style>
+.group{border:1px solid #dfe7f3;background:#fff;border-radius:15px;margin:12px 0;overflow:hidden}.grouphead{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;padding:18px;background:#fff;border:0;text-align:left;color:#193257;cursor:pointer;font:inherit}.grouphead b{font-size:17px}.grouphead small{display:block;color:#67758c;margin-top:5px}.gbody{padding:0 17px 15px;border-top:1px solid #edf0f5}.filters{display:flex;gap:9px;overflow-x:auto;padding:14px 0 12px}.filter{min-width:120px;border:1px solid #d7e1ee;border-radius:10px;background:white;color:#25446c;padding:8px;font:inherit;font-size:13px}.filter label{display:block;font-size:11px;color:#63738e;margin-bottom:5px}.filter select{max-width:170px;width:100%;border:0;background:white;color:#193257;font-size:13px;outline:0}.group .paper{margin:8px 0}.group .paper h3{font-size:15px}.countline{font-size:13px;color:#687790;margin:8px 0 13px}@media(max-width:540px){.grouphead{padding:15px}.gbody{padding:0 12px 12px}} </style>
 </head>
 <body>
 <header><nav><a class="logo" href="/">📘 Raj<span>Paper</span></a><span class="navnote">Rajasthan Exam Paper Search</span></nav></header>
@@ -16,34 +16,64 @@
 <main class="wrap main">
 <div class="heading"><h2>प्रश्न पत्र खोजें</h2><span class="count" id="status" aria-live="polite">लोड हो रहा है…</span></div>
 <div class="chips" role="group" aria-label="Filter by board"><button class="chip" data-board="all" aria-pressed="true">सभी पेपर</button><button class="chip" data-board="RSSB" aria-pressed="false">RSSB</button><button class="chip" data-board="RPSC" aria-pressed="false">RPSC</button><button class="chip" data-board="BSER" aria-pressed="false">REET</button></div>
-<div id="list" aria-live="polite"></div>
+<div id="examgroups" aria-live="polite"></div>
 <section class="about"><h2>RajPaper क्या है?</h2><p>यह राजस्थान की सरकारी परीक्षाओं के प्रश्नपत्र खोजने का स्वतंत्र इंडेक्स है। PDF सरकारी वेबसाइट पर ही खुलती है; हम प्रश्नपत्रों की नकल या डाउनलोड कॉपी होस्ट नहीं करते। RajPaper किसी सरकारी विभाग से संबद्ध नहीं है। नए सत्यापित पेपर समय के साथ जोड़े जाएँगे।</p></section>
 </main>
 <footer>© RajPaper · स्वतंत्र शैक्षणिक इंडेक्स · सरकारी वेबसाइट नहीं</footer>
 <script>
 (()=>{
-const input=document.getElementById('search'),list=document.getElementById('list'),status=document.getElementById('status');
-let papers=[],board='all';
-const norm=s=>String(s||'').normalize('NFKC').toLocaleLowerCase().replace(/[-_(),.]/g,' ').replace(/\s+/g,' ').trim();
-const synonyms={patwari:'पटवारी',patwar:'पटवारी',patwari2021:'पटवारी',rssb:'rsmssb',ayurveda:'आयुर्वेद'};
+'use strict';
+const input=document.querySelector('#search'),out=document.querySelector('#examgroups'),status=document.querySelector('#status');
+let papers=[],exams=[],board='all',opened=null;
+const choices={};
+const normalize=s=>String(s||'').normalize('NFKC').toLocaleLowerCase().replace(/[-_(),.]/g,' ').replace(/\s+/g,' ').trim();
+const aliases={patwari:'पटवारी',patwar:'पटवारी',reet:'रीट',grade:'ग्रेड',second:'सेकंड',rssb:'rsmssb'};
+function matches(p,e,q){const text=normalize([p.name,p.exam,p.year,p.shift,p.source,e.name,...e.aliases,p.subject,p.recruitment,p.paper_type,p.group,p.session,p.set_code].join(' '));return normalize(q).split(' ').filter(Boolean).every(t=>text.includes(t)||(aliases[t]&&text.includes(aliases[t])))}
+function filterPapers(e,papersForExam){let found=papersForExam;for(const [key,value] of Object.entries(choices[e.id]||{}))if(value)found=found.filter(p=>String(p[key]||'')===value);return found}
 function render(){
- const tokens=norm(input.value).split(' ').filter(Boolean);
- const found=papers.filter(p=>(board==='all'||p.source===board)&&tokens.every(t=>{const hay=norm([p.name,p.exam,p.year,p.shift,p.source].join(' '));return hay.includes(t)||(synonyms[t]&&hay.includes(norm(synonyms[t])))}));
- status.textContent=found.length+' पेपर मिले';
- list.replaceChildren();
- if(!found.length){const e=document.createElement('div');e.className='empty';e.textContent=papers.length?'इस नाम का पेपर अभी नहीं मिला। दूसरा नाम लिखकर देखो।':'अभी कोई पेपर उपलब्ध नहीं है।';list.append(e);return}
- for(const p of found){
-  if(!/^https:\/\//i.test(p.pdf_url))continue;
-  const card=document.createElement('article');card.className='paper';
-  const left=document.createElement('div'),tag=document.createElement('span'),name=document.createElement('h3'),meta=document.createElement('div'),pdf=document.createElement('a');
-  tag.className='tag';tag.textContent=p.source||'Official';name.textContent=p.name;meta.className='meta';meta.textContent=[p.year,p.shift].filter(Boolean).join(' · ');
-  pdf.className='download';pdf.href=p.pdf_url;pdf.target='_blank';pdf.rel='noopener noreferrer';pdf.textContent='PDF खोलें ↗';
-  left.append(tag,name,meta);card.append(left,pdf);list.append(card)
- }
+out.replaceChildren();let groups=0,total=0;
+for(const e of exams){
+if(board!=='all' && board!==e.board)continue;
+const matchesExam=papers.filter(p=>p.exam_id===e.id&&matches(p,e,input.value));
+if(!matchesExam.length)continue;
+groups++;total+=matchesExam.length;
+const section=document.createElement('section');section.className='group';
+const heading=document.createElement('button');heading.type='button';heading.className='grouphead';heading.setAttribute('aria-expanded',String(opened===e.id));
+const title=document.createElement('span'),bold=document.createElement('b'),sub=document.createElement('small'),arrow=document.createElement('span');
+bold.textContent=e.name;sub.textContent=e.board+' · '+matchesExam.length+' पेपर';arrow.textContent=opened===e.id?'−':'＋';title.append(bold,sub);heading.append(title,arrow);
+heading.onclick=()=>{opened=opened===e.id?null:e.id;render()};section.append(heading);
+if(opened===e.id){
+const body=document.createElement('div');body.className='gbody',filters=document.createElement('div');filters.className='filters';
+choices[e.id]??={};
+for(const f of e.filters){
+const options=[...new Set(matchesExam.map(p=>p[f.key]).filter(Boolean))].sort((a,b)=>String(b).localeCompare(String(a),'hi',{numeric:true}));
+if(!options.length)continue;
+const wrap=document.createElement('div'),label=document.createElement('label'),select=document.createElement('select');
+wrap.className='filter';label.textContent=f.label;
+const defaultOpt=document.createElement('option');defaultOpt.value='';defaultOpt.textContent='सभी';select.append(defaultOpt);
+for(const value of options){const o=document.createElement('option');o.value=value;o.textContent=value;select.append(o)}
+select.value=choices[e.id][f.key]||'';
+select.onchange=()=>{choices[e.id][f.key]=select.value;render()};wrap.append(label,select);filters.append(wrap)
 }
-input.addEventListener('input',render);
-document.querySelectorAll('.chip').forEach(chip=>chip.addEventListener('click',()=>{board=chip.dataset.board;document.querySelectorAll('.chip').forEach(b=>b.setAttribute('aria-pressed',String(b===chip)));render()}));
-fetch('/data/papers.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{papers=Array.isArray(d)?d:[];render()}).catch(()=>{status.textContent='डेटा नहीं खुला';list.textContent='पेपर लोड करने में समस्या आई। थोड़ी देर बाद दोबारा खोलें।'});
+body.append(filters);
+const selected=filterPapers(e,matchesExam),count=document.createElement('div');count.className='countline';count.textContent=selected.length+' पेपर उपलब्ध';body.append(count);
+if(!selected.length){const none=document.createElement('p');none.textContent='इस विकल्प का पेपर नहीं मिला। दूसरा विकल्प चुनें।';body.append(none)}
+for(const p of selected){
+if(!/^https:\/\//i.test(p.pdf_url))continue;
+const card=document.createElement('article');card.className='paper';
+const left=document.createElement('div'),name=document.createElement('h3'),meta=document.createElement('div'),pdf=document.createElement('a');
+name.textContent=p.name;meta.className='meta';meta.textContent=[p.recruitment,p.year,p.subject,p.level,p.paper_type,p.exam_date,p.session,p.set_code].filter(Boolean).join(' · ');
+pdf.className='download';pdf.href=p.pdf_url;pdf.target='_blank';pdf.rel='noopener noreferrer';pdf.textContent='PDF खोलें ↗';left.append(name,meta);card.append(left,pdf);body.append(card)
+}section.append(body)
+}out.append(section)
+}
+status.textContent=total+' पेपर · '+groups+' परीक्षाएँ';
+if(!groups){const none=document.createElement('div');none.className='empty';none.textContent='कोई पेपर नहीं मिला। दूसरी परीक्षा का नाम लिखें।';out.append(none)}
+}
+input.oninput=()=>{opened=null;render()};
+document.querySelectorAll('.chip').forEach(chip=>chip.onclick=()=>{board=chip.dataset.board;opened=null;document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',String(c===chip)));render()});
+Promise.all([fetch('/data/papers.json',{cache:'no-cache'}).then(r=>r.json()),fetch('/data/exams.json',{cache:'no-cache'}).then(r=>r.json())])
+.then(([p,e])=>{papers=p;exams=e;render()}).catch(()=>{status.textContent='डेटा नहीं खुला';out.textContent='डेटा लोड नहीं हो सका। पेज दोबारा खोलें।'});
 })();
 </script>
 </body></html>
