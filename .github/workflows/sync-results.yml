@@ -1,0 +1,51 @@
+name: Update RajResults from official sites
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '11 2,8,14,20 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rajresults-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Results preview branch
+        uses: actions/checkout@v4
+        with:
+          ref: preview-results
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch results from official websites
+        run: python scripts/sync_results.py
+      - name: Validate JSON and official result links
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.parse import urlparse
+          allowed={'rajeduboard.rajasthan.gov.in','rpsc.rajasthan.gov.in','rssb.rajasthan.gov.in','rsmssb.rajasthan.gov.in','police.rajasthan.gov.in'}
+          data=json.loads(Path('data/results.json').read_text(encoding='utf-8'))
+          assert isinstance(data,list)
+          assert all(x.get('title') and x.get('board') and urlparse(x.get('url','')).hostname in allowed for x in data)
+          assert len({x['url'] for x in data})==len(data)
+          print('Verified entries:',len(data))
+          PY
+      - name: Commit verified results and review candidates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/results.json data/pending-results.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: sync official Rajasthan result links'
+            git push origin HEAD:preview-results
+          fi
